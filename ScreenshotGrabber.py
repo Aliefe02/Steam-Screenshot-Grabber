@@ -11,6 +11,7 @@ def GetScreenshotLink(ID):
 def GetScreenshots(ID):
     ScreenshotList = []
     options = Options()
+    options.add_argument('--headless')
     browser = webdriver.Chrome(options=options)
     url = GetScreenshotLink(ID)
     browser.get(url)
